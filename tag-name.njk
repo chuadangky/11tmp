@@ -1,0 +1,26 @@
+---
+layout: base
+eleventyExcludeFromCollections: true
+
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter: tagList
+
+permalink: /tags/{{ tag }}/
+renderData:
+  title: Tagged “{{ tag }}”
+---
+
+  {% set postslist = collections[ tag ] %}
+  <ul>
+    {%- for post in postslist -%}
+    <li>
+      <a href="{{ post.url | url }}">
+        {{ post.data.title }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+  
+  <p>List of <a href="{{ '/tags/' | url }}">all tags</a>.</p>

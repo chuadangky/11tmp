@@ -3,7 +3,7 @@ title: hiệu ứng zoom hình ảnh trong bài viết
 tags:
 - effect
 - animation
-- js
+- script
 - images
 - zoom
 ---
